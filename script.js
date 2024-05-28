@@ -8,11 +8,10 @@ describe('Signup Modal', () => {
 
     // Check that the modal is visible
     cy.get('#signupModal').should('be.visible');
-
-    // Click the close button
+// Click the close button
 cy.get('.close').click();
 
 // Check that the modal is not visible
 cy.get('.modal').should('not.be.visible').then(() => {}, {timeout: 10000}); // Wait for 10 seconds
-  });
+    });
 });
