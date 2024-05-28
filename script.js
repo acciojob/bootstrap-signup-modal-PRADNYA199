@@ -9,10 +9,10 @@ describe('Signup Modal', () => {
     // Check that the modal is visible
     cy.get('#signupModal').should('be.visible');
 
-    // Click the close button
-    cy.get('#signupModal .close').click();
+    // Click the close button and debug
+cy.get('#signupModal .close').click().debug();
 
-    // Check that the modal is not visible
-    cy.get('#signupModal').should('not.be.visible');
+// Check that the modal is not visible
+cy.get('#signupModal').should('not.be.visible');
   });
 });
