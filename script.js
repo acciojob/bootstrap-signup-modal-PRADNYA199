@@ -14,5 +14,8 @@ describe('Signup Modal', () => {
 
     // Check that the modal is not visible
     cy.get('#signupModal').should('not.be.visible');
+	  cy.get('.close').click();
+cy.wait(500); // Wait for 500ms
+cy.get('#signupModal').should('not.be.visible');
   });
 });
