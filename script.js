@@ -19,5 +19,6 @@ it('tests modal functionality', () => {
   cy.get('button').first().click();
   cy.get('.modal').should('be.visible');
   cy.get('.close').click();
+  cy.wait(1000); // wait for 1 second
   cy.get('.modal').should('not.be.visible');
 });
